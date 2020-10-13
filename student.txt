@@ -1,0 +1,4 @@
+Student name: Bastiaan Verheul
+Student number: 667382
+Student class: HAINF1SC
+URL student GitHub repository: https://github.com/Bastiaan27/WebMarkup-Final-Assesment
