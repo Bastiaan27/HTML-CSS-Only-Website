@@ -1,3 +1,145 @@
-#headerindex{
-text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+/* PC */
+@media screen and (min-width: 1280px)
+{
+	
+	h1{
+		background-color: #8FF;
+	}
+	h2{
+		background-color: #8FF;
+	}
+	nav{
+		font-family: 'Notable', sans-serif;
+		background-color: #F8F;
+	}
+	ul{
+		list-style-type: none;
+		display: inline;
+	}
+	li{
+		float: left;
+	}
+	article{
+		background-color: #FF8;
+	}
+	aside{
+		background-color: #88F;
+		grid-area: aside;
+	}
+	footer{
+		background-color: #F88;
+	}
+	header{
+		text-align: center;
+	}
+	#mobile, #tablet{
+		display: none;
+	}
+	.cookiestatement{
+		width: 400px;
+		border: 3px #FFF;
+		opacity: 0.5;
+		background-color: #FA0;
+	}
+	
+	/* Home pagina */
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin:1em;
+		border: 3px solid #FFF;
+		background-color: #F0F;
+	}
+	#article1{
+		
+	}
+	#homeimg1{
+		float: right;
+		width: 1.5em;
+		height: 150px;
+	}
+	#article2{
+		
+	}
+	#homeimg1{
+		
+	}
+	#article3{
+		
+	}
+	#homeimg1{
+		
+	}
+	#asidehome{
+		float: right;
+	}
+	
+	/* How Solar Works */
+	#gridContainer{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-template-areas:
+		"chargecontroller solarpanels battery"
+		"chargecontroller solarpanels battery"
+		"inverter solarpanels battery"
+		"inverter solarpanels dcpower"
+		"inverter solarpanels dcpower"
+		"inverter solarpanels dcpower"
+		"inverter acpower acpower"
+		"aside aside aside"
+		"aside aside aside"
+		"footer footer footer"
+		"footer footer footer";
+	}
+	#solarpanels{
+		grid-area: solarpanels;
+	}
+	#chargecontroller{
+		grid-area: chargecontroller;
+	}
+	#battery{
+		grid-area: battery;
+	}
+	#dcpower{
+		grid-area: dcpower;
+	}
+	#inverter{
+		grid-area: inverter;
+	}
+	#acpower{
+		grid-area: acpower;
+	}
+	#aside{
+		margin-left: 5%;
+		margin-right: 5%;
+		grid-area: aside;
+	}
+	#footersolarworks{
+		grid-area: footer;
+	}
+	/* Foto's solar works */
+	#solarworksimg1{
+		width: 30%;
+		height: auto;
+	}
+	#solarworksimg2{
+		width: 30%;
+		height: auto;
+	}
+	#solarworksimg3{
+		width: 30%;
+		height: auto;
+	}
+	
+	/* EU Solar */
+	
 }
+
+/* Tablet */
+@media screen and (min-width: 481px max-width: 1279px)
+
+/* Mobile */
+@media screen and (max-width: 480px)
