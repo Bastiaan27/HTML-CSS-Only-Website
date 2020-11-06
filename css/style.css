@@ -1,38 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 
 /* PC */
-@media screen and (min-width: 1280px)
-{
+@media screen and (min-width: 1280px){
 	
 	h1{
-		background-color: #8FF;
+		
 	}
 	h2{
-		background-color: #8FF;
+		
+	}
+	h3{
+		text-align: center;
 	}
 	nav{
 		font-family: 'Notable', sans-serif;
-		background-color: #F8F;
 	}
 	ul{
 		list-style-type: none;
-		display: inline;
+		display: inline;+		
 	}
 	li{
 		float: left;
 	}
 	article{
-		background-color: #FF8;
+		
 	}
 	aside{
-		background-color: #88F;
 		grid-area: aside;
 	}
 	footer{
-		background-color: #F88;
+		
 	}
 	header{
 		text-align: center;
+	}
+	th, td{
+		text-align: center;
+		border: 1px solid black;
+		padding: 0.3em;
+		background-color: 
 	}
 	#mobile, #tablet{
 		display: none;
@@ -45,6 +51,12 @@
 	}
 	
 	/* Home pagina */
+	#videohome{
+		width: 70%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
 	.flex-container{
 		display: flex;
 		flex-direction: column;
@@ -80,7 +92,7 @@
 	/* How Solar Works */
 	#gridContainer{
 		display: grid;
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 33.3% 33.3% 33.3%;
 		grid-template-areas:
 		"chargecontroller solarpanels battery"
 		"chargecontroller solarpanels battery"
@@ -89,10 +101,11 @@
 		"inverter solarpanels dcpower"
 		"inverter solarpanels dcpower"
 		"inverter acpower acpower"
-		"aside aside aside"
-		"aside aside aside"
+		"asidesolar1 asidesolar2 asidesolar3"
+		"asidesolar1 asidesolar2 asidesolar3"
 		"footer footer footer"
 		"footer footer footer";
+		grid-gap: 5px;
 	}
 	#solarpanels{
 		grid-area: solarpanels;
@@ -112,34 +125,465 @@
 	#acpower{
 		grid-area: acpower;
 	}
-	#aside{
-		margin-left: 5%;
-		margin-right: 5%;
-		grid-area: aside;
+	#asidesolar1{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar1;
+	}
+	#product1solar{
+		text-align: center;
+	}
+	#asidesolar2{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar2;
+	}
+	#product2solar{
+		text-align: center;
+	}
+	#asidesolar3{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar3;
+	}
+	#product3solar{
+		text-align: center;
+	}
+	.imgsolarworks{
+		height: 200px;
+		width: auto;
+		margin: 5%;
 	}
 	#footersolarworks{
 		grid-area: footer;
 	}
-	/* Foto's solar works */
-	#solarworksimg1{
-		width: 30%;
-		height: auto;
-	}
-	#solarworksimg2{
-		width: 30%;
-		height: auto;
-	}
-	#solarworksimg3{
-		width: 30%;
-		height: auto;
-	}
 	
 	/* EU Solar */
+	#gridContainerEU{
+		display: grid;
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-areas:
+		"articleEU articleEU articleEU articleEU"
+		"tableEU tableEU tableEU asideEU1"
+		"tableEU tableEU tableEU asideEU1"
+		"tableEU tableEU tableEU asideEU2"
+		"tableEU tableEU tableEU asideEU2"
+		"tableEU tableEU tableEU asideEU3"
+		"copyrightEU copyrightEU copyrightEU asideEU3";
+		grid-gap: 3px;
+	}
+	#articleeu{
+		grid-area: articleEU;
+		text-align: center;
+	}
+	#titelEU{
+		text-align: center;
+	}
+	#eutable{
+		grid-area: tableEU;
+		margin: 5%;
+	}
+	#timetable{
+		color: white;
+		background-color: black;
+	}
+	td:first-child{
+		background-color: yellow;
+	}
+	tr:nth-child(odd){
+		background-color: #add8e6;
+	}
+	#copyrighttable{
+		grid-area: copyrightEU;
+	}
+	#asideeu1{
+		grid-area: asideEU1;
+	}
+	#product1EU{
+		text-align: center;
+	}
+	#asideeu2{
+		grid-area: asideEU2;
+	}
+	#product2EU{
+		text-align: center;
+	}
+	#asideeu3{
+		grid-area: asideEU3;
+	}
+	#product3EU{
+		text-align: center;
+	}
+	.imgeusolar{
+		float: right;
+		height: auto;
+		width: 80%;
+		margin: 5%;
+	}
+	#footerEU{
+		grid-area: footerEU;
+	}
+	
+	/* Contact */
+	#gridContainerContact{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-template-areas:
+		"form form asidecontact1"
+		"form form asidecontact1"
+		"form form asidecontact2"
+		"form form asidecontact2"
+		"form form asidecontact3"
+		"form form asidecontact3";
+	}
+	#form{
+		grid-area: form;
+	}
+	#asidecontact1{
+		grid-area: asidecontact1;
+	}
+	#asidecontact2{
+		grid-area: asidecontact2;
+	}
+	#asidecontact3{
+		grid-area: asidecontact3;
+	}
 	
 }
 
 /* Tablet */
-@media screen and (min-width: 481px max-width: 1279px)
+@media screen and (min-width: 481px max-width: 1279px){
+	/* How Solar Works */
+	#gridContainer{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"solarpanels chargecontroller"
+		"csolarpanels chargecontroller"
+		"battery chargecontroller"
+		"battery inverter"
+		"battery inverter"
+		"battery inverter"
+		"acpower acpower"
+		"acpower acpower"
+		"asidesolar1 asidesolar2"
+		"asidesolar1 asidesolar2"
+		"footer footer"
+		"footer footer";
+		grid-gap: 5px;
+	}
+	#solarpanels{
+		grid-area: solarpanels;
+	}
+	#chargecontroller{
+		grid-area: chargecontroller;
+	}
+	#battery{
+		grid-area: battery;
+	}
+	#dcpower{
+		display: none;
+	}
+	#inverter{
+		grid-area: inverter;
+	}
+	#acpower{
+		grid-area: acpower;
+	}
+	#asidesolar1{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar1;
+	}
+	#product1solar{
+		text-align: center;
+	}
+	#asidesolar2{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar2;
+	}
+	#product2solar{
+		text-align: center;
+	}
+	#asidesolar3{
+		display: none;
+	}
+	#product3solar{
+		display: none;
+	}
+	.imgsolarworks{
+		height: 200px;
+		width: auto;
+		margin: 5%;
+	}
+	#footersolarworks{
+		grid-area: footer;
+	}
+	
+	/* EU Solar */
+	#gridContainerEU{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"articleEU articleEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"copyrightEU copyrightEU"
+		"asideEU2 asideEU3"
+		"asideEU2 asideEU3";
+		grid-gap: 3px;
+	}
+	#articleeu{
+		grid-area: articleEU;
+		text-align: center;
+	}
+	#titelEU{
+		text-align: center;
+	}
+	#eutable{
+		grid-area: tableEU;
+		margin: 5%;
+	}
+	#timetable{
+		color: white;
+		background-color: black;
+	}
+	td:first-child{
+		background-color: yellow;
+	}
+	tr:nth-child(odd){
+		background-color: #add8e6;
+	}
+	#copyrighttable{
+		grid-area: copyrightEU;
+	}
+	#asideeu1{
+		grid-area: asideEU1;
+	}
+	#product1EU{
+		text-align: center;
+	}
+	#asideeu2{
+		grid-area: asideEU2;
+	}
+	#product2EU{
+		text-align: center;
+	}
+	#asideeu3{
+		grid-area: asideEU3;
+	}
+	#product3EU{
+		text-align: center;
+	}
+	.imgeusolar{
+		float: right;
+		height: auto;
+		width: 80%;
+		margin: 5%;
+	}
+	#footerEU{
+		grid-area: footerEU;
+	}
+	
+	/* Contact */
+	#gridContainerContact{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-areas:
+		"form asidecontact1"
+		"form asidecontact1"
+		"form asidecontact2"
+		"form asidecontact2"
+		"form asidecontact3"
+		"form asidecontact3";
+	}
+	#form{
+		grid-area: form;
+	}
+	#asidecontact1{
+		grid-area: asidecontact1;
+	}
+	#asidecontact2{
+		grid-area: asidecontact2;
+	}
+	#asidecontact3{
+		grid-area: asidecontact3;
+	}
+}
 
 /* Mobile */
-@media screen and (max-width: 480px)
+@media screen and (max-width: 480px){
+	/* How Solar Works */
+	#gridContainer{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"inverter inverter"
+		"inverter inverter"
+		"inverter inverter"
+		"battery battery"
+		"battery battery"
+		"battery battery"
+		"chargecontroller chargecontroller"
+		"chargecontroller chargecontroller"
+		"chargecontroller chargecontroller"
+		"asidesolar1 asidesolar1"
+		"asidesolar1 asidesolar1"
+		"asidesolar2 asidesolar2"
+		"asidesolar2 asidesolar2"
+		"asidesolar3 asidesolar3"
+		"asidesolar3 asidesolar3"
+		"footer footer"
+		"footer footer";
+		grid-gap: 5px;
+	}
+	#solarpanels{
+		grid-area: solarpanels;
+	}
+	#chargecontroller{
+		grid-area: chargecontroller;
+	}
+	#battery{
+		grid-area: battery;
+	}
+	#dcpower{
+		display: none;
+	}
+	#inverter{
+		grid-area: inverter;
+	}
+	#acpower{
+		display: none;
+	}
+	#asidesolar1{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar1;
+	}
+	#product1solar{
+		text-align: center;
+	}
+	#asidesolar2{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar2;
+	}
+	#product2solar{
+		text-align: center;
+	}
+	#asidesolar3{
+		margin-left: auto;
+		margin-right: auto;
+		grid-area: asidesolar3;
+	}
+	#product3solar{
+		text-align: center;
+	}
+	.imgsolarworks{
+		height: 200px;
+		width: auto;
+		margin: 5%;
+	}
+	#footersolarworks{
+		grid-area: footer;
+	}
+	
+	/* EU Solar */
+	#gridContainerEU{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"copyrightEU copyrightEU"
+		"asideEU1 asideEU1"
+		"asideEU2 asideEU2"
+		"asideEU3 asideEU3";
+		grid-gap: 3px;
+	}
+	#articleeu{
+		display: none;
+	}
+	#titelEU{
+		text-align: center;
+	}
+	#eutable{
+		grid-area: tableEU;
+		margin: 5%;
+	}
+	#timetable{
+		color: white;
+		background-color: black;
+	}
+	td:first-child{
+		background-color: yellow;
+	}
+	tr:nth-child(odd){
+		background-color: #add8e6;
+	}
+	#copyrighttable{
+		grid-area: copyrightEU;
+	}
+	#asideeu1{
+		grid-area: asideEU1;
+	}
+	#product1EU{
+		text-align: center;
+	}
+	#asideeu2{
+		grid-area: asideEU2;
+	}
+	#product2EU{
+		text-align: center;
+	}
+	#asideeu3{
+		grid-area: asideEU3;
+	}
+	#product3EU{
+		text-align: center;
+	}
+	.imgeusolar{
+		float: right;
+		height: auto;
+		width: 80%;
+		margin: 5%;
+	}
+	#footerEU{
+		grid-area: footerEU;
+	}
+	
+	/* Contact */
+	#gridContainerContact{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-areas:
+		"form form"
+		"form form"
+		"form form"
+		"form form"
+		"form form"
+		"form form"
+		"asidecontact1 asidecontact1"
+		"asidecontact2 asidecontact2"
+		"asidecontact3 asidecontact3";
+	}
+	#form{
+		grid-area: form;
+	}
+	#asidecontact1{
+		grid-area: asidecontact1;
+	}
+	#asidecontact2{
+		grid-area: asidecontact2;
+	}
+	#asidecontact3{
+		grid-area: asidecontact3;
+	}
+}
