@@ -19,6 +19,7 @@
 	
 	<header>
 		<img
+		class="logo"
 		src= "img/website_logo.png"
 		title= "Solar Logo"
 		alt= "Solar Logo"
@@ -36,28 +37,25 @@
 	</nav>
 	
 	<h3>
-	Contact informatie: inholland@solar.nl Tel. 0674695278
+		Contact informatie: inholland@solar.nl Tel. 0674695278
 	</h3>
 	
 	<section id="gridContainerContact">
-	<form id="form">
-		<fieldset>
-			<legend>Contact pagina</legend>
-			
-			<label for = "name">Voer je naam in:</label>
-			<input type = "text" id = "name" name = "name" placeholder = "John Doe">
-			
-			<label for = "email">Voer je email in:</label>
-			<input type = "email" id = "email" name = "email" placeholder = "johndoe@example.com">
-			
-			<label for = "message">Voer hier je bericht in:</label>
-			<textarea id="message" name="message" rows="8" cols="100"/>
-		</textarea>
-		<input type="submit">
-	</fieldset>
-</form>
-
-<aside id="asidecontact1">
+		<form id="form">
+			<fieldset id="fieldsetcontact">
+				<legend>Contact pagina</legend>
+				
+				<input type="text" id="name" name="name" placeholder="Voer hier je naam in">
+				
+				<input type="email" id="email" name="email" placeholder="Voer hier je email in">
+				
+				<textarea id="message" name="message" placeholder="Voer hier je bericht in">
+			</textarea>
+			<input type="submit">
+		</fieldset>
+	</form>
+	
+	<aside id="asidecontact1">
 		<a href= "https://www.ikwilzonneenergie.nl/epages/61494231.sf/nl_NL/?ObjectPath=/Shops/61494231/Products/PMP243027010">
 			<img
 			class="imgeusolar"
@@ -90,9 +88,10 @@
 		<p id="product3EU">Victron Energy omvormer Smart 12V 2000W 230V</p>
 	</aside>
 </section>
-	
+
 <footer>
 	&copy; Bastiaan Verheul
+	<section id="cookiestatement"><p>Cookie statement</p></section>
 </footer>
 
 </body>
