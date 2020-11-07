@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
-
+#toggle{
+	display: none;
+}
+#hamburgermenu{
+	display: none;
+}
 h1{
-	
+	color: #e6e600;
 }
 h2{
-	
+	color: #008000;
 }
 h3{
 	text-align: center;
-}
-nav{
-	font-family: 'Notable', sans-serif;
-	margin: 3em;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: gray;
 }
 ul{
 	border-top: 2px solid black;
@@ -47,6 +45,13 @@ th, td{
 #mobile, #tablet{
 	display: none;
 }
+#wholenav{
+	font-family: 'Notable', sans-serif;
+	margin: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #808080;
+}
 #cookiestatement{
 	position: fixed;
 	z-index: 9999;
@@ -77,6 +82,9 @@ th, td{
 .articletext{
 	text-align: center;
 	word-spacing: 1px;
+	letter-spacing: 0.1em;
+	line-height: 1.3em;
+	text-indent: 1px;
 }
 .homeimg{
 	float: right;
@@ -193,7 +201,7 @@ th, td{
 	grid-gap: 3px;
 }
 #geotime{
-	background-color: black;
+	background-color: #000;
 }
 #articleeu{
 	grid-area: articleEU;
@@ -207,35 +215,38 @@ th, td{
 	margin: 5%;
 }
 #timetable{
-	color: white;
-	background-color: black;
+	color: #FFF;
+	background-color: #000;
 }
 td:first-child{
-	background-color: yellow;
+	background-color: #FFFF00;
+}
+tr:nth-child(even){
+	background-color: #CFF;
 }
 tr:nth-child(odd){
-	background-color: #add8e6;
+	background-color: #FFF;
 }
 #copyrighttable{
 	grid-area: copyrightEU;
 }
+.figurefoto{
+	text-align: center;
+}
 #asideeu1{
+	width: 400px;
+	height: auto;
 	grid-area: asideEU1;
 }
-#product1EU{
-	text-align: center;
-}
 #asideeu2{
+	width: 400px;
+	height: auto;
 	grid-area: asideEU2;
 }
-#product2EU{
-	text-align: center;
-}
 #asideeu3{
+	width: 400px;
+	height: auto;
 	grid-area: asideEU3;
-}
-#product3EU{
-	text-align: center;
 }
 .imgeusolar{
 	float: right;
@@ -293,6 +304,12 @@ tr:nth-child(odd){
 /* Tablet */
 @media only screen and (max-width: 1279px) and (min-width: 481px)
 {
+	#toggle{
+		display: none;
+	}
+	#hamburgermenu{
+		display: none;
+	}
 	/* How Solar Works */
 	#gridContainer{
 		display: grid;
@@ -341,10 +358,22 @@ tr:nth-child(odd){
 .tab{
 	display: none;
 }
+#asideeu2{
+	margin-left: 25%;
+	width: 300px;
+	height: auto;
+	grid-area: asideEU2;
+}
+#asideeu3{
+	margin-right: 25%;
+	width: 300px;
+	height: auto;
+	grid-area: asideEU3;
+}
 /* Contact */
 #gridContainerContact{
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 70% auto;
 	grid-template-areas:
 	"form asidecontact1"
 	"form asidecontact1"
@@ -360,6 +389,17 @@ tr:nth-child(odd){
 {
 	.logo{
 		display: none;
+	}
+	#videohome{
+		display: none;
+	}
+	#wholenav{
+		display: none;
+		text-align: center;
+	}
+	#hamburgermenu:checked + #wholenav{
+		position: relative;
+		display: block;
 	}
 	/* How Solar Works */
 	#gridContainer{
