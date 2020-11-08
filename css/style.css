@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+@media only screen and (min-width: 1280px)
+{
+	#buttonhamburger{
+		display: none;
+	}
+}
+
 #toggle{
 	display: none;
 }
 #hamburgermenu{
 	display: none;
+}
+body{
+	font-family: "Arial", "Helvetica", "sans-serif";
 }
 h1{
 	color: #e6e600;
@@ -14,6 +25,10 @@ h2{
 h3{
 	text-align: center;
 }
+em{
+	text-transform: uppercase;
+	color: #CCCC00;
+}
 ul{
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
@@ -22,7 +37,6 @@ ul{
 }
 li{
 	margin: 5%;
-	display: inline;
 }
 article{
 	
@@ -73,8 +87,7 @@ th, td{
 #flexcontainer{
 	display: flex;
 	flex-wrap: wrap;
-	width: 65%;
-	margin: 1em;
+	width: 100%;
 }
 .titlearticle{
 	font-weight: bold;
@@ -88,33 +101,37 @@ th, td{
 }
 .homeimg{
 	float: right;
-	width: 25%;
-	height: auto;
+	width: auto;
+	height: 10em;;
+}
+.sectionfooterlink{
+	margin-left: 10%;
 }
 #article1{
 	text-indent: 1px;
 	flex-grow: 0;
 	flex-basis: 100%;
-	border: 3px solid black;
+	margin-bottom: 1em;
 }
 #article2{
 	text-indent: 1px;
 	flex-grow: 0;
 	flex-basis: 100%;
-	border: 3px solid black;
+	margin-bottom: 1em;
 }
 #article3{
 	text-indent: 1px;
 	flex-grow: 0;
 	flex-basis: 100%;
-	border: 3px solid black;
+	margin-bottom: 1em;
+}
+#catchline{
+	font-weight: bold;
 }
 #asidehome{
 	flex-grow: 0;
 	flex-shrink: 0;
 	width: 35%;
-	float: right;
-	border: 3px solid black;
 }
 
 /* How Solar Works */
@@ -310,6 +327,69 @@ tr:nth-child(odd){
 	#hamburgermenu{
 		display: none;
 	}
+	#buttonhamburger{
+		display: none;
+	}
+	/* Home */
+	#flexcontainer{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	#videohome{
+		order: 2;
+		width: 70%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		border-style: double;
+		border-color: #000;
+		border-width: 0.5px;
+	}
+	.titlearticle{
+		font-weight: bold;
+	}
+	.articletext{
+		text-align: center;
+		word-spacing: 1px;
+		letter-spacing: 0.1em;
+		line-height: 1.3em;
+		text-indent: 1px;
+	}
+	.homeimg{
+		padding: 1em;
+		float: left;
+		width: 25%;
+		height: auto;
+	}
+	.sectionfooterlink{
+		margin-left: 10%;
+	}
+	#article1{
+		order: 5;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#article2{
+		order: 4;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#article3{
+		order: 3;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#asidehome{
+		margin-left: auto;
+		margin-right: auto;
+		flex-grow: 0;
+		flex-shrink: 0;
+		width: 35%;
+	}
 	/* How Solar Works */
 	#gridContainer{
 		display: grid;
@@ -329,59 +409,59 @@ tr:nth-child(odd){
 		"footer footer";
 		grid-gap: 5px;
 	}
-
+	
 	#dcpower{
-	display: none;
-}
-#asidesolar3{
-	display: none;
-}
-#product3solar{
-	display: none;
-}
-/* EU Solar */
-#gridContainerEU{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-areas:
-	"articleEU articleEU"
-	"tableEU tableEU"
-	"tableEU tableEU"
-	"tableEU tableEU"
-	"tableEU tableEU"
-	"tableEU tableEU"
-	"copyrightEU copyrightEU"
-	"asideEU2 asideEU3"
-	"asideEU2 asideEU3";
-	grid-gap: 3px;
-}
-.tab{
-	display: none;
-}
-#asideeu2{
-	margin-left: 25%;
-	width: 300px;
-	height: auto;
-	grid-area: asideEU2;
-}
-#asideeu3{
-	margin-right: 25%;
-	width: 300px;
-	height: auto;
-	grid-area: asideEU3;
-}
-/* Contact */
-#gridContainerContact{
-	display: grid;
-	grid-template-columns: 70% auto;
-	grid-template-areas:
-	"form asidecontact1"
-	"form asidecontact1"
-	"form asidecontact2"
-	"form asidecontact2"
-	"form asidecontact3"
-	"form asidecontact3";
-}
+		display: none;
+	}
+	#asidesolar3{
+		display: none;
+	}
+	#product3solar{
+		display: none;
+	}
+	/* EU Solar */
+	#gridContainerEU{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"articleEU articleEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"tableEU tableEU"
+		"copyrightEU copyrightEU"
+		"asideEU2 asideEU3"
+		"asideEU2 asideEU3";
+		grid-gap: 3px;
+	}
+	.tab{
+		display: none;
+	}
+	#asideeu2{
+		margin-left: 25%;
+		width: 300px;
+		height: auto;
+		grid-area: asideEU2;
+	}
+	#asideeu3{
+		margin-right: 25%;
+		width: 300px;
+		height: auto;
+		grid-area: asideEU3;
+	}
+	/* Contact */
+	#gridContainerContact{
+		display: grid;
+		grid-template-columns: 70% auto;
+		grid-template-areas:
+		"form asidecontact1"
+		"form asidecontact1"
+		"form asidecontact2"
+		"form asidecontact2"
+		"form asidecontact3"
+		"form asidecontact3";
+	}
 }
 
 /* Mobile */
@@ -400,6 +480,35 @@ tr:nth-child(odd){
 	#hamburgermenu:checked + #wholenav{
 		position: relative;
 		display: block;
+	}
+	#buttonhamburger{
+		display: ;
+	}
+	/* Home */
+	#article1{
+		order: 3;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#article2{
+		order: 2;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#article3{
+		order: 1;
+		text-indent: 1px;
+		flex-basis: 100%;
+		margin: 1em;
+	}
+	#asidehome{
+		margin-left: auto;
+		margin-right: auto;
+		flex-grow: 0;
+		flex-shrink: 0;
+		width: 65%;
 	}
 	/* How Solar Works */
 	#gridContainer{
@@ -451,10 +560,10 @@ tr:nth-child(odd){
 		grid-gap: 3px;
 	}
 	.tab{
-	display: none;
+		display: none;
 	}
 	.mobile{
-	display: none;
+		display: none;
 	}
 	/* Contact */
 	#gridContainerContact{
